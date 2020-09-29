@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Get Locker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <style type="text/css">
+        #header-nav {
+            width: 590px;
+            position: relative;
+        }
+        
+        li {
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            list-style: none;
+        }
+        
+        ul {
+            display: flex;
+        }
+        
+        @media only screen and (max-width: 535px) {
+            ul {
+                width: 300px;
+                display: flex;
+                margin: auto;
+            }
+        }
+    </style>
+    <script src="qrcode.min.js"></script>
+    <script>
+        var QRgen = false;
+        console.log(QRgen)
+
+        function generateQR() {
+            if (QRgen) return;
+            QRgen = true;
+            console.log(QRgen)
+            var lockerPass = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+            var qrcode = new QRCode(document.getElementById('qrcode'))
+
+            qrcode.makeCode(lockerPass)
+            var label = '<h3>' + 'Please Save this QR code to open again your Locker' + '</h3>'
+            feedcontent.innerHTML = label;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header" class="min">
+        <div id="body-header">
+            <div id="header-logo">
+                <img src="web_assets\logo.png" style="height: 95px; width: 140px">
+            </div>
+            <div id="header-nav">
+                <ul>
+                    <li>
+                        <a href="https://e-lock.herokuapp.com/item/Home.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://e-lock.herokuapp.com/item/Profile.php">Company Profile</a>
+                    </li>
+                    <li>
+                        <a href="https://e-lock.herokuapp.com/item/Get_Locker.php">Get Locker</a>
+                    </li>
+                    <li>
+                        <a href="https://e-lock.herokuapp.com/item/Read_QR.php">Read Locker</a>
+                    </li>
+                    <li>
+                        <a href="https://e-lock.herokuapp.com/item/Register.php">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="min">
+        <div style="margin: auto; width: 75px;">
+            <button id="submit" onclick="generateQR()">
+                <div style="padding: 5px;text-align: center;">Get QR</div>
+            </button>
+        </div>
+        <br>
+        <div style="align-items: center; width: 256px; margin: auto;">
+            <div id="qrcode"></div>
+        </div>
+        <br>
+        <div id="feedcontent" style="margin: auto; width: 300px;"></div>
+
+    </div>
+
+    <div id="footer" class="min">
+        <div id="body-footer">
+            <h2 style="margin-left: 60px;">E-Lock</h2>
+            <ul>
+                <li>
+                    <a href=" https://www.instagram.com/elock_official " target="_blank">
+                        <img src="web_assets\Instagram.svg " alt=" ">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Elock92961347 " target="_blank">
+                        <img src="web_assets\twitter.svg " alt=" ">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/elockofficial/ " target="_blank">
+                        <img src="web_assets\facebook.svg " alt=" ">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+label {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#footer p {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+h1 {
+    font-family: Arial;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    border: none;
+    background: #EFEFEF;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 90px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 6px 10px -6px #000;
+    background: #4a4a4a;
+}
+
+#body-header {
+    height: 90px;
+    width: 90%;
+    margin: auto;
+}
+
+#header-logo {
+    height: 100%;
+    width: 140px;
+    position: absolute;
+    float: left;
+}
+
+#header-nav {
+    width: 145px;
+    padding-top: 34px;
+    position: relative;
+    float: right;
+}
+
+#content {
+    min-height: 100vh;
+    width: 65%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#box {
+    height: 980px;
+    padding: 60px;
+    padding-top: 50px;
+    border-radius: 18px;
+    box-shadow: 0px 3px 20px -3px #000;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    background-color: #4a4a4a;
+}
+
+#body-footer {
+    height: 40px;
+    width: 200px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#div-submit {
+    display: flex;
+    justify-content: space-around;
+}
+
+#submit {
+    background: #4a4a4a;
+    border-radius: 10px;
+    border: none;
+    border-color: transparent;
+    color: white;
+    font-family: arial;
+    font-size: 14px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.select {
+    width: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+@media only screen and (max-width: 828px) {
+    #header {
+        width: 100%;
+        height: 150px;
+        position: sticky;
+        top: 0;
+    }
+    #body-header {
+        height: 150px;
+        margin: auto;
+    }
+    #header-logo {
+        height: 95px;
+        width: 200px;
+        position: relative;
+        margin: auto;
+        float: none;
+    }
+    #header-nav {
+        height: 40px;
+        padding-top: 0;
+        position: relative;
+        margin: auto;
+        float: none;
+    }
+
+    ul {
+        width: 300px;
+        display: flex;
+    }
+}

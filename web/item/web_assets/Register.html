@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Register</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+	<div id="header">
+		<div id="body-header">
+			<div id="header-logo">
+				<img src="web_assets\e.png" style="height: 95px; width: 180px">
+			</div>
+			<div id="header-nav">
+				<a href="https://e-lock.herokuapp.com/item/Home.php">< Back to home</a>
+			</div>
+		</div>
+	</div>
+		
+	<div id="content">
+		<form id="myForm" action="insertUser.php" method="POST">
+			<label>
+				<b>Full name:</b>
+			</label><br>
+			<input type="text" name="FullName" placeholder="Enter your name.." id="name"><br>
+
+			<label>
+				<b>Email address:</b>
+			</label><br>
+
+			<input type="email" name="email" placeholder="Enter your email.." id="email"><br>
+			<div style="margin-bottom: 7px;">
+				<label>
+					<b>Gender:</b>
+				</label>
+				<br>
+				<input type="radio" name="gender" value="Male" class="select">
+				<label>Male</label>
+				<br>
+				<input type="radio" name="gender" value="Female" class="select">
+				<label>Female</label><br>
+			</div>
+			<label>
+				<b>Phone number:</b>
+			</label><br>
+			<input type="text" name="phone" placeholder="Enter your phone number.." id="phone"><br>		
+			<label>
+				<b>Password:</b>
+			</label><br>
+
+			<input type="password" name="pass" placeholder="Enter your password.." id="pass"><br>
+
+			<div id="div-submit">
+					<input type="submit" onclick="validateForm()" value="Submit" id="submit">
+			</div>
+		</form>
+	</div>
+	
+	<script type="text/javascript" src="validateRegistration.js"></script>
+
+	<div id="footer">
+		<div id="body-footer">
+			<p>E-Lock</p>
+		</div>
+	</div>
+
+</body>
+</html>
